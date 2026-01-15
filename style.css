@@ -1,0 +1,580 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+body {
+overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+
+header {
+   background-color: rgb(53, 53, 51);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    margin-top: 25px;
+}
+
+.logo{
+    height: 80px;
+
+}
+
+.slider {
+       margin: 0 auto;
+    width: 100%;
+    max-width: 1920px; /* se quiser limitar */
+    height: 500px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+
+}
+
+
+.manual-navigation {
+    position: absolute;
+    width: 1920px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.manual-btn {
+    border: 2px solid #f2f6f7;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.manual-btn:hover {
+    background: #f2f6f7;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+   
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+   
+}
+#radio3:checked ~ .first {
+    margin-left: -50%;
+   
+}
+
+.navigation-auto div{
+    border: 2px solid #f2f6f7;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation-auto {
+    position: absolute;
+    width: 1920px;
+    margin-top: 480px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 20px;
+}
+
+.infoin > h2 {
+    text-align: center;
+    margin-top: 1%;
+    font-weight: normal;
+}
+
+.infoin > p {
+    text-align: center;
+    margin: 0% 15%;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: rgb(80, 80, 80);
+}
+
+.modelos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 1%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 80px;
+  padding-bottom: 10px;
+}
+.card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ← isto centraliza o <p> e qualquer outro item */
+  text-decoration: none;
+  color: inherit;
+
+}
+.card {
+  border: 1px solid rgba(44,43,43,.3);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,.2);
+  max-width: none;   /* controla largura */
+  height: auto;      /* controla altura */
+
+}
+
+.card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+
+.card p  {
+width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tipos1 {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 80px;
+  padding-bottom: 10px;
+}
+
+.categoria a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;              /* ocupa toda a altura do card */
+  text-decoration: none;
+  color: inherit;
+}
+.categoria {
+  height: 700px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.categoria img {
+  width: 100%;
+  flex: 1;                   /* agora funciona de novo */
+  object-fit: cover;
+  display: block;
+}
+
+
+.categoria h3 {
+  margin: 4px 0;
+  text-align: center;
+}   
+
+.cardpt2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-extra {
+  display: none;
+  border: 1px solid rgba(44,43,43,.3);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 5   px rgba(0,0,0,.2);
+  max-width: none;   /* controla largura */
+  height: auto;      /* controla altura */
+
+}
+
+.cartoes {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 80px;
+  padding-bottom: 10px;
+}
+
+.card-extra img {
+width: 100%;
+  height: 65%;
+  object-fit: cover;
+}
+.card-extra p {
+  text-align: center;
+  margin: 2px 0;
+}
+.card-extra a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ← isto centraliza o <p> e qualquer outro item */
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-extra:hover {
+    transform: scale(1.05);
+    transition: transform 0.8s;
+    background-color: #D3D3D3;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.8s;
+    background-color: #D3D3D3;
+}
+
+
+#btnVerMais {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em; 
+    background-color: rgb(53, 53, 51);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnVerMais:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+.categoria:hover {
+    transform: scale(1.05);
+    transition: transform 0.8s;
+
+}
+
+.titulobrasil {
+    text-align:left;
+    margin: 20px 80px;
+    font-size: 1.5em;
+     font-family: 'Poppins', sans-serif;
+     
+}
+
+.textobrasil {
+    text-align: left;
+    margin: 0% 80px 5% 80px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: rgb(80, 80, 80);
+    font-family: 'Poppins', sans-serif;
+}
+
+.modelosclassicos {
+    text-align:left;
+    margin:  0px 80px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 1.5em;
+}
+
+.classics {
+display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  padding: 80px;
+  padding-bottom: 10px;
+
+  
+}
+
+.classic-card {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.2);
+    width: 100%;   /* controla largura */
+    max-height: 280px !important ;      /* controla altura */
+    height: 280px;
+    background: linear-gradient(to right, lightgrey, #ffffff);
+}
+
+.classic-card a  {
+     display: flex;
+  align-items: center;   /* alinha verticalmente */
+  gap: 22px;             /* espaço entre imagem e texto */
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  
+}
+
+.correacao >  img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    align-items: top;
+}
+.classic-card img {
+    width: 350px;
+    height: 260px;
+    object-fit: cover;
+    align-items: top;
+}
+
+
+
+.classic-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+    
+}
+.classic-card:hover img {
+    transform: scale(1.09);
+    transition: transform 0.5s;
+    
+}
+.card-text:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 255);
+    text-shadow: 1px 2px 2px rgba(85, 85, 85, 0.2);
+    
+}
+.classic-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+/* texto */
+.classic-card p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.classic-card p {
+  text-align: left;   /* 🔥 remove centralização feia */
+}
+.mapa {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.brloja {
+    margin: 20px 80px;
+    font-size: 1.5em;
+     font-family: 'Poppins', sans-serif;
+}
+
+.lojas {
+    text-align: center;
+    padding: 5px 13px 5px 13px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: rgb(54, 54, 54);
+    font-family: 'Poppins', sans-serif;
+}
+
+.textolojas {
+    font-size: 0.9em;
+    color: grey;
+    padding-left: 50px;
+
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eee;
+  height: 250px;
+}
+
+.redes {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  padding-bottom: 5px;
+  margin: 0px 80px;
+}
+
+hr {
+    margin: 20px 80px;
+}
+
+.redes a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+.redes a img:hover {
+    transform: scale(1.2);
+}
+
+.fale {
+  display: flex;
+  gap: 25px;
+  margin: 0px 80px;
+}
+
+.fale a {
+  text-decoration: none;
+  color: #555;
+}
+
+.km {
+  display: flex;
+  justify-content: center;
+    font-size: 1.5em;
+    margin: 20px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media (max-width: 768px) {
+
+  /* Header */
+  nav {
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-top: 5px;
+    font-size: 1.1em;
+  }
+
+  /* Slider */
+  .slider {
+    height: 250px;
+  }
+
+  .slides img {
+    width: 100%;
+    height: auto;
+  }
+  .slides {
+    height: 250px;
+  }
+
+  .manual-navigation,
+  .navigation-auto {
+    margin-top: 220px;
+  }
+
+  /* Textos com margens menores */
+  .titulobrasil,
+  .textobrasil,
+  .brloja,
+  .redes,
+  .fale,
+  hr {
+    margin: 20px;
+  }
+
+  .infoin p {
+    margin: 0 20px;
+    font-size: 1em;
+  }
+
+  /* Grids viram coluna única */
+  .cards,
+  .tipos1,
+  .cartoes,
+  .cardpt2 {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  /* Categoria cards */
+  .categoria {
+    height: auto;
+  }
+
+  /* Classics */
+  .classic-card {
+    height: auto;
+    max-height: none;
+  }
+
+  .classic-card a {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+
+  /* Footer */
+  .redes {
+    justify-content: center;
+  }
+
+  .fale {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
